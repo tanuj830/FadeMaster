@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className=" inline lg:hidden  z-40 relative ">
+      <div className=" inline md:hidden  z-40 relative ">
         {/* for mobile */}
         <div className="pt-4 pb-3  w-full  ">
           {/* border-b border-gray-700 */}
@@ -61,7 +61,13 @@ const Navbar = () => {
             {showMenu === true ? (
               <div className="relative  w-full   py-1">
                 <div className="fixed top-0 bottom-0 left-0 right-0  bg-background  rounded-b-3xl   h-screen w-full text-2xl  p-5">
-                  <div className="flex justify-end">
+                  <div className="flex justify-between items-center">
+                    <Link
+                      className="cursor-pointer text-[1.3rem] font-semibold"
+                      href="/"
+                    >
+                      Fade Master
+                    </Link>
                     <button
                       className="text-3xl  font-extrabold mr-3 brightness-200"
                       onClick={handleClick}
@@ -69,7 +75,7 @@ const Navbar = () => {
                       <RxCross2 />
                     </button>
                   </div>
-                  <div className="flex justify-evenly items-start  w-full h-full flex-col">
+                  <div className="flex  items-start  w-full h-full gap-4 flex-col mt-10">
                     <div className="text-center flex items-center justify-center gap-2">
                       <Link
                         className={`brightness-200  font-semibold flex items-center ${
@@ -86,9 +92,11 @@ const Navbar = () => {
                     <div className="text-center flex items-center justify-center gap-2">
                       <Link
                         className={`brightness-200  font-semibold flex items-center ${
-                          path == "/s" ? "text-primary " : "text-primary/50"
+                          path == "/how-it-works"
+                            ? "text-primary "
+                            : "text-primary/50"
                         }`}
-                        href="/s"
+                        href="/how-it-works"
                       >
                         <span className="p-2 font-bold rounded-full text-xs">
                           02
@@ -99,9 +107,11 @@ const Navbar = () => {
                     <div className="text-center flex items-center justify-center gap-2">
                       <Link
                         className={`brightness-200  font-semibold flex items-center ${
-                          path == "/s" ? "text-primary " : "text-primary/50"
+                          path == "/dashboard/audio-cutter"
+                            ? "text-primary "
+                            : "text-primary/50"
                         }`}
-                        href="/s"
+                        href="/dashboard/audio-cutter"
                       >
                         <span className="p-2 font-bold rounded-full text-xs">
                           03
@@ -109,46 +119,37 @@ const Navbar = () => {
                         Audio Cutter
                       </Link>
                     </div>
-                    <div className="text-center flex items-center justify-center gap-2">
-                      <Link
-                        className={`brightness-200  font-semibold flex items-center ${
-                          path == "/s" ? "text-primary " : "text-primary/50"
-                        }`}
-                        href="/s"
-                      >
-                        <span className="p-2 font-bold rounded-full text-xs">
-                          02
-                        </span>
-                        Join Audio
-                      </Link>
-                    </div>
-
                     {/* icons */}
-                    <div className="flex items-center justify-center gap-6 md:gap-8">
-                      <Link
-                        className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
-                        href="https://github.com/tanuj830"
-                      >
-                        <AiFillGithub />
-                      </Link>
-                      <Link
-                        className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
-                        href="https://www.linkedin.com/in/tanuj-bhatt-85a2511b5/"
-                      >
-                        <AiFillLinkedin />
-                      </Link>
-                      <Link
-                        className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
-                        href="https://leetcode.com/tanujdotcpp/"
-                      >
-                        <SiLeetcode />
-                      </Link>
-                      <Link
-                        className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
-                        href="https://www.instagram.com/aka_tanuj/"
-                      >
-                        <AiFillInstagram />
-                      </Link>
+                    <div className=" absolute bottom-6 left-0 right-0">
+                      <div className="flex items-center justify-center gap-6 md:gap-8 ">
+                        <Link
+                          className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
+                          href="https://github.com/tanuj830"
+                        >
+                          <AiFillGithub />
+                        </Link>
+                        <Link
+                          className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
+                          href="https://www.linkedin.com/in/tanuj-bhatt-85a2511b5/"
+                        >
+                          <AiFillLinkedin />
+                        </Link>
+                        <Link
+                          className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
+                          href="https://leetcode.com/tanujdotcpp/"
+                        >
+                          <SiLeetcode />
+                        </Link>
+                        <Link
+                          className="hover:scale-110 hover:text-white transition-all duration-300 text-3xl"
+                          href="https://www.instagram.com/aka_tanuj/"
+                        >
+                          <AiFillInstagram />
+                        </Link>
+                      </div>
+                      <p className="mt-4 text-xs text-muted-foreground text-center w-full">
+                        Made with 💓 by tanujbhatt.in
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -156,27 +157,10 @@ const Navbar = () => {
             ) : null}
           </div>
         </div>
-        {showTopBanner && !showMenu ? (
-          <div className="transition-all duration-1000  md:text-[14px] bg-[url(https://images.pexels.com/photos/10461974/pexels-photo-10461974.jpeg?auto=compress&cs=tinysrgb&w=6000)] bg-center bg-no-repeat px-10 py-4  tracking-wider bg-cover text-white relative">
-            <button
-              className="absolute lg:top-4 lg:right-10 hidden lg:inline-block z-40"
-              onClick={handleTopBanner}
-            >
-              <AiOutlineClose />
-            </button>
-            <h6 className="text-center font-medium text-xs">
-              80% OFF : If you want audio web premium services then its a best
-              time!{" "}
-              <Link className=" font-bold underline" href="#">
-                Explore Services
-              </Link>
-            </h6>
-          </div>
-        ) : null}
       </div>
 
       {/* for pc */}
-      <div className="hidden px-4 lg:px-20 lg:inline-block z-50 relative  backdrop-blur-md overflow-hidden	w-full xl:h-20 h-16   ">
+      <div className="hidden px-4 lg:px-20 md:inline-block z-50 relative  backdrop-blur-md overflow-hidden	w-full xl:h-20 h-16   ">
         <div className=" flex justify-between items-center  w-full h-full">
           <div className=" flex items-center  h-full">
             <Link
@@ -187,7 +171,38 @@ const Navbar = () => {
               <span className=" font-extrabold text-3xl">.</span>
             </Link>
           </div>
-          <div className=" flex  items-center gap-x-2 h-full ">
+
+          <div className=" flex  items-center gap-x-4 h-full ">
+            <Link
+              className={`brightness-200  font-semibold flex items-center ${
+                path == "/"
+                  ? "text-primary underline underline-offset-4"
+                  : "text-primary/50"
+              }`}
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className={`brightness-200  font-semibold flex items-center ${
+                path == "/how-it-works"
+                  ? "text-primary underline underline-offset-4"
+                  : "text-primary/50"
+              }`}
+              href="/how-it-works"
+            >
+              How it Works
+            </Link>
+            <Link
+              className={`brightness-200  font-semibold flex items-center ${
+                path == "/dashboard/audio-cutter"
+                  ? "text-primary underline underline-offset-4"
+                  : "text-primary/50"
+              }`}
+              href="/dashboard/audio-cutter"
+            >
+              Audio Cutter
+            </Link>
             <ThemeButton />
           </div>
         </div>
