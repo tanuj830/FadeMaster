@@ -449,7 +449,7 @@
 // };
 
 // export default AudioTrimmer;
-
+"use client";
 import { useRef, useState, useEffect } from "react";
 import WaveSurfer from "wavesurfer.js";
 import RegionsPlugin from "wavesurfer.js/dist/plugin/wavesurfer.regions.min";

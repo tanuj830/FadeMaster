@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRightFromSquare, File } from "lucide-react";
 import Link from "next/link";
@@ -11,7 +10,6 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import Editor from "@/components/Editor";
-import { RiGhostLine } from "react-icons/ri";
 
 const ResumeBuilder = () => {
   return (
