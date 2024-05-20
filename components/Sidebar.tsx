@@ -27,18 +27,6 @@ const Sidebar = () => {
       route: "/dashboard/audio-cutter",
       icon: ScissorsIcon,
     },
-    {
-      id: 2,
-      text: "Resume Analyzer",
-      route: "/dashboard/resume-analyzer",
-      icon: SearchCheckIcon,
-    },
-    {
-      id: 3,
-      text: "Code Chat",
-      route: "/dashboard/code-chat",
-      icon: Code,
-    },
   ];
   return (
     <aside className="p-5 border-r border-r-secondary h-screen">
@@ -46,8 +34,7 @@ const Sidebar = () => {
         <div className="h-fit">
           <div className="">
             <Link className="cursor-pointer text-2xl  font-semibold" href="/">
-              ProfilePro
-              <span className="text-[#0000ff] font-extrabold text-3xl">.</span>
+              Fade Master
             </Link>
           </div>
           <div className="mt-10 flex flex-col ">
