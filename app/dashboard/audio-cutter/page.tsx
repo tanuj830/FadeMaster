@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { File } from "lucide-react";
+import { ArrowRight, ArrowUpRightFromSquare, File } from "lucide-react";
 import Link from "next/link";
 import {
   Drawer,
@@ -11,6 +11,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import Editor from "@/components/Editor";
+import { RiGhostLine } from "react-icons/ri";
 
 const ResumeBuilder = () => {
   return (
@@ -23,20 +24,36 @@ const ResumeBuilder = () => {
           </span>
           <div className="md:w-[60%]">
             <h5 className="text-foreground font-medium my-4">
-              Trim your audio
+              Trim your audio and download it in best quality.
             </h5>
             <p className="text-muted-foreground text-wrap leading-7 text-sm">
-              Trim any audio and download it in the best quality for free.
+              This app can be used to trim and/or cut audio tracks, remove an
+              audio fragments. Fade in and fade out your music easily to make
+              the audio harmoniously.{" "}
             </p>
           </div>{" "}
           <Drawer>
             <DrawerTrigger asChild>
-              <Button>Trim Audio</Button>
+              <Button className="">Get's Started</Button>
             </DrawerTrigger>
             <DrawerContent className="h-[60vh] md:h-[100vh] flex justify-center items-center px-5 lg:px-0">
               <div className="h-full w-full md:w-[60vw] lg:w-[50vw] xl:w-[40vw]">
                 <DrawerHeader className="">
-                  <DrawerTitle>Audio Trimmer</DrawerTitle>
+                  <DrawerTitle className="text-start w-full">
+                    Audio Trimmer
+                  </DrawerTitle>
+                  <div className="text-start ">
+                    <small className="text-muted-foreground">
+                      Don't know how it works?
+                      <Link
+                        href="/how-it-works"
+                        target="_blank"
+                        className="text-blue-600 font-medium"
+                      >
+                        how it works
+                      </Link>
+                    </small>
+                  </div>
                 </DrawerHeader>
                 <Editor />
                 {/* <div className="p-5 rounded-lg flex flex-col gap-1 mt-3 bg-muted ">

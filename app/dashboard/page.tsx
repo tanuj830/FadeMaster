@@ -1,23 +1,9 @@
 "use client";
-import MobileSidebar from "@/components/MobileSidebar";
-import Sidebar from "@/components/Sidebar";
-import { ThemeButton } from "@/components/ThemeButton";
-import { Button } from "@/components/ui/button";
-import {
-  DogIcon,
-  File,
-  FileJson,
-  HelpCircleIcon,
-  ScanLine,
-  ScissorsIcon,
-  Wrench,
-} from "lucide-react";
+import { ScissorsIcon } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 const Layout = () => {
-  const path = usePathname();
   const [ishover, setIsHover] = React.useState(false);
   const [hoverid, sethoverid] = React.useState(0);
   const features = [
@@ -27,20 +13,6 @@ const Layout = () => {
       route: "/dashboard/audio-cutter",
       disp: "The user-friendly audio cutter helps you to trim audio by seconds.",
       icon: ScissorsIcon,
-    },
-    {
-      id: 2,
-      featureName: "Resume Analyzer",
-      route: "/dashboard/resume-analyzer",
-      disp: "Our Resume Analyzer tool enhances your resume's impact. Upload it, and our AI tool will assess formatting, keywords, and content quality, providing an ATS Score.",
-      icon: ScanLine,
-    },
-    {
-      id: 3,
-      featureName: "Code Chat",
-      route: "/dashboard/code-chat",
-      disp: "Code Chat enables real-time collaboration on coding projects. Whether solo or in a team, it offers a seamless environment for discussing code, sharing ideas, and debugging together.",
-      icon: FileJson,
     },
   ];
   return (
