@@ -7,7 +7,7 @@ const page = () => {
       <Navbar />
       <div className=" px-5 md:px-[10vw] w-full ">
         <h6 className="text-2xl my-5 font-bold">How it Works ?</h6>
-        <div className="flex flex-col md:flex-row gap-10 bg-muted md:p-5">
+        <div className="flex flex-col md:flex-row gap-10 bg-muted rounded-lg md:p-5">
           <video
             src="/fademaster.mp4"
             className="w-full md:w-[50vw] md:h-[70vh]"
