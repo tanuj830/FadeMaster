@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="flex flex-col lg:flex-row-reverse justify-between ">
         <div className=" lg:p-0">
           <img
-            className="object-contain"
+            className="object-contain "
             src="https://assets-global.website-files.com/655dd78870c51459319f6bbb/655df71ede1029cae5386583_geo-3-p-500.png"
             alt=""
           />
