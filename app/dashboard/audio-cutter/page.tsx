@@ -33,7 +33,7 @@ const ResumeBuilder = () => {
             <DrawerTrigger asChild>
               <Button>Trim Audio</Button>
             </DrawerTrigger>
-            <DrawerContent className="h-[100vh] flex justify-center items-center px-5 lg:px-0">
+            <DrawerContent className="h-[60vh] md:h-[100vh] flex justify-center items-center px-5 lg:px-0">
               <div className="h-full w-full md:w-[60vw] lg:w-[50vw] xl:w-[40vw]">
                 <DrawerHeader className="">
                   <DrawerTitle>Audio Trimmer</DrawerTitle>
