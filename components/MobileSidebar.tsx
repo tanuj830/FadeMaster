@@ -16,6 +16,7 @@ import {
   Menu,
   MenuIcon,
   MenuSquareIcon,
+  ScissorsIcon,
   SearchCheckIcon,
 } from "lucide-react";
 import Link from "next/link";
@@ -32,21 +33,9 @@ const MobileSidebar = () => {
     },
     {
       id: 1,
-      text: "Resume Builder",
-      route: "/dashboard/resume-builder",
-      icon: Building,
-    },
-    {
-      id: 2,
-      text: "Resume Analyzer",
-      route: "/dashboard/resume-analyzer",
-      icon: SearchCheckIcon,
-    },
-    {
-      id: 3,
-      text: "Code Chat",
-      route: "/dashboard/code-chat",
-      icon: Code,
+      text: "Trim Audio",
+      route: "/dashboard/audio-cutter",
+      icon: ScissorsIcon,
     },
   ];
   return (
@@ -80,7 +69,12 @@ const MobileSidebar = () => {
             <div className="py-3">
               <div>
                 <Link
-                  className={`bg-primary  p-3 rounded-lg flex items-center gap-2 text-md `}
+                  onClick={() =>
+                    alert(
+                      "This feature is not released yet, till then explore Fade Master for free."
+                    )
+                  }
+                  className={`bg-primary text-primary-foreground  p-3 rounded-lg flex items-center gap-2 text-md `}
                   href="#"
                 >
                   <CreditCardIcon className="mr-2 h-4 w-4" />

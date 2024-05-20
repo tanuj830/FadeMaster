@@ -37,7 +37,7 @@ const Hero = () => {
               <Link href="/dashboard">Get's Started</Link>
             </Button>
             <Button className=" bg-primary/50" size={"lg"}>
-              How it Works ?
+              <Link href="/how-it-works">How it Works ?</Link>
             </Button>
           </div>
           {/* <button className="px-10 py-5 font-medium w-fit bg-[#0000ff] rounded-full lg:mt-10">
