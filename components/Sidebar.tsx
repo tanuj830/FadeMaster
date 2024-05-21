@@ -25,7 +25,7 @@ const Sidebar = () => {
       id: 1,
       text: "Audio Cutter",
       route: "/dashboard/audio-cutter",
-      icon: 
+      icon: ScissorsIcon,
     },
   ];
   return (
