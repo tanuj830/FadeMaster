@@ -40,7 +40,7 @@ const Sidebar = () => {
           <div className="mt-10 flex flex-col ">
             {/* Navlinks */}
             <div className="flex flex-col gap-y-1">
-              {dashboardLinks.map((link) 
+              {dashboardLinks.map((link) => (
                 <Link
                   className={`hover:bg-secondary ${
                     path == link.route ? "bg-secondary" : null
