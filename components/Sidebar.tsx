@@ -38,7 +38,7 @@ const Sidebar = () => {
             </Link>
           </div>
           <div className="mt-10 flex flex-col ">
-            {/* Navlinks */}
+            {/* 
             <div className="flex flex-col gap-y-1">
               {dashboardLinks.map((link) => (
                 <Link
