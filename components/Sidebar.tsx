@@ -34,7 +34,7 @@ const Sidebar = () => {
         <div className="h-fit">
           <div className="">
             <Link className="cursor-pointer text-2xl  font-semibold" href="/">
-              
+              Fade Master
             </Link>
           </div>
           <div className="mt-10 flex flex-col ">
