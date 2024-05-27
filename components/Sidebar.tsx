@@ -28,7 +28,7 @@ const Sidebar = () => {
       icon: ScissorsIcon,
     },
   ];
-  return 
+  return (
     <aside className="p-5 border-r border-r-secondary h-screen">
       <div className="flex flex-col justify-between h-full">
         <div className="h-fit">
